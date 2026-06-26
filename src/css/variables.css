@@ -1,0 +1,19 @@
+:root{
+    --font-heading: "JetBrains Mono", monospace;
+    --font-body: "Inter", sans-serif;
+
+    /* Replace these with official palette */
+    --primary:#4F46E5;
+    --secondary:#06B6D4;
+    --background:#0B0F19;
+    --surface:#131A2A;
+    --text:#FFFFFF;
+    --text-secondary:#B5BED0;
+
+    --radius:18px;
+
+    --transition-fast:.18s ease-out;
+    --transition-normal:.35s ease-in-out;
+
+    --container:1200px;
+}

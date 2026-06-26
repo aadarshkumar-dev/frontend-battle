@@ -1,0 +1,14 @@
+section{
+    min-height:100vh;
+    padding:6rem 2rem;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+main{
+    overflow:hidden;
+}
+
+.container{
+    width:min(100%,1200px);
+    margin:auto;
+}
