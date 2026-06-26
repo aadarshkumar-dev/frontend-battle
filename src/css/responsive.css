@@ -38,14 +38,6 @@
 
     }
 
-    .hero-container,
-    .pricing-grid,
-    .testimonial-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
     .hero {
 
         text-align: center;
@@ -63,6 +55,18 @@
 
         display: none;
 
+    }
+
+    .featured {
+        transform: none;
+        border-width: 3px;
+    }
+
+    .hero-container,
+    .pricing-grid,
+    .testimonial-grid,
+    .bento-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
     }
 
 }

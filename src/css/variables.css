@@ -2,13 +2,12 @@
     --font-heading: "JetBrains Mono", monospace;
     --font-body: "Inter", sans-serif;
 
-    /* Replace these with official palette */
-    --primary:#4F46E5;
-    --secondary:#06B6D4;
-    --background:#0B0F19;
-    --surface:#131A2A;
-    --text:#FFFFFF;
-    --text-secondary:#B5BED0;
+    --primary:#FFC801; 
+    --secondary:#FF9932; 
+    --background:#172B36; 
+    --surface:#114C5A; 
+    --text:#F1F6F4;  
+    --text-secondary:#D9E8E2;
 
     --radius:18px;
 

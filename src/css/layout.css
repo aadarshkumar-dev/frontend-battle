@@ -12,3 +12,11 @@ main{
     width:min(100%,1200px);
     margin:auto;
 }
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh; 
+}

@@ -4,16 +4,23 @@ const container = document.querySelector("#feature-container");
 
 let activeIndex = 0;
 
-function renderDesktop(){
+
+function renderDesktop() {
 
     container.innerHTML = `
         <div class="bento-grid">
 
-            ${features.map((feature,index)=>`
+            ${features.map((feature, index) => `
 
                 <article
-                    class="bento-card ${index===activeIndex?"active":""}"
+                    class="bento-card ${index === activeIndex ? "active" : ""}"
                     data-index="${index}">
+
+                    <div class="feature-icon">
+                        <img 
+                            src="${feature.icon}" 
+                            alt="${feature.title}">
+                    </div>
 
                     <h3>${feature.title}</h3>
 
@@ -26,9 +33,10 @@ function renderDesktop(){
         </div>
     `;
 
-    container.querySelectorAll(".bento-card").forEach(card=>{
 
-        card.addEventListener("mouseenter",()=>{
+    container.querySelectorAll(".bento-card").forEach(card => {
+
+        card.addEventListener("mouseenter", () => {
 
             activeIndex = Number(card.dataset.index);
 
@@ -40,12 +48,14 @@ function renderDesktop(){
 
 }
 
-function renderMobile(){
+
+
+function renderMobile() {
 
     container.innerHTML = `
         <div class="accordion">
 
-            ${features.map((feature,index)=>`
+            ${features.map((feature, index) => `
 
                 <article class="accordion-item">
 
@@ -53,14 +63,20 @@ function renderMobile(){
                         class="accordion-btn"
                         data-index="${index}">
 
-                        ${feature.title}
+                        <img
+                            src="${feature.icon}"
+                            alt="${feature.title}">
+
+                        <span>${feature.title}</span>
 
                     </button>
 
-                    <div
-                        class="accordion-content ${index===activeIndex?"open":""}">
 
-                        <p>${feature.description}</p>
+                    <div class="accordion-content ${index === activeIndex ? "open" : ""}">
+
+                        <p>
+                            ${feature.description}
+                        </p>
 
                     </div>
 
@@ -71,9 +87,10 @@ function renderMobile(){
         </div>
     `;
 
-    container.querySelectorAll(".accordion-btn").forEach(btn=>{
 
-        btn.addEventListener("click",()=>{
+    container.querySelectorAll(".accordion-btn").forEach(btn => {
+
+        btn.addEventListener("click", () => {
 
             activeIndex = Number(btn.dataset.index);
 
@@ -85,13 +102,16 @@ function renderMobile(){
 
 }
 
-function render(){
 
-    if(window.innerWidth>768){
+
+
+function render() {
+
+    if (window.innerWidth > 768) {
 
         renderDesktop();
 
-    }else{
+    } else {
 
         renderMobile();
 
@@ -99,6 +119,9 @@ function render(){
 
 }
 
-window.addEventListener("resize",render);
+
+
+window.addEventListener("resize", render);
+
 
 render();
