@@ -5,3 +5,6 @@ import "./css/layout.css";
 import "./css/components.css";
 import "./css/animations.css";
 import "./css/responsive.css";
+
+import "./js/currencySwitcher.js";
+import "./js/features.js";

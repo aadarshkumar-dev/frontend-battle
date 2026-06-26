@@ -1,0 +1,68 @@
+@media (max-width:768px) {
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .bento-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+@media (max-width:900px) {
+
+    .hero-container {
+
+        text-align: center;
+
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+    .hero-stats {
+
+        flex-wrap: wrap;
+
+    }
+
+    .hero-container,
+    .pricing-grid,
+    .testimonial-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero {
+
+        text-align: center;
+
+    }
+
+    .hero-buttons,
+    .hero-stats {
+
+        justify-content: center;
+
+    }
+
+    .nav-actions {
+
+        display: none;
+
+    }
+
+}
